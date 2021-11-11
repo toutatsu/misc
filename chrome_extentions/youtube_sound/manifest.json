@@ -1,0 +1,17 @@
+{
+    "name": "YouTube Sound Analyzer",
+    "short_name": "Youtube Sound",
+    "manifest_version": 2,
+    "version": "0.0.0.0",
+    "description": "YouTube動画の音を可視化",
+
+    "content_scripts":[
+        {
+            "matches": [
+                "https://www.youtube.com/*"
+            ],
+            "js": ["test.js"],
+            "css": ["test.css"]
+        }
+    ]
+}
