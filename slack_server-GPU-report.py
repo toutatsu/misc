@@ -87,16 +87,18 @@ response=requests.post(
                     "text": {
                         "type": "mrkdwn",
                         "text": 
+                        "GPU processes\n"+
                         "```"+
                         processes[['username','p_name','GPU_num','GPU_memory','time']].to_string()
                         +"```"
                     }
                 },
+                {"type": "divider"},
                 {
                     "type": "section",
                     "text": {
                         "type": "mrkdwn",
-                        "text": "```"+subprocess.check_output(['nvidia-smi'], shell=True).decode('utf-8')[:2271]+"```"
+                        "text": "NVIDIA System Management Interface\n"+"```"+subprocess.check_output(['nvidia-smi'], shell=True).decode('utf-8')[:2271]+"```"
                     }
                 },
                 {
